@@ -1,0 +1,54 @@
+{
+  "license": "MIT",
+  "main": "src/index.js",
+  "private": true,
+  "name": "aoc2019",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint \"src/**/*.{j,t}s?(x)\"",
+    "pretty": "pretty-quick",
+    "test": "jest"
+  },
+  "author": "",
+  "description": "",
+  "devDependencies": {
+    "@alex7kom/sayonara-config": "0.6.1",
+    "husky": "^3.1.0"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "*.?(test|spec).{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true,
+          "node": true,
+          "es6": true
+        },
+        "parserOptions": {
+          "ecmaVersion": 2018
+        }
+      },
+      {
+        "files": [
+          "*.ts?(x)"
+        ],
+        "rules": {
+          "node/no-missing-import": "off"
+        }
+      }
+    ],
+    "extends": "./node_modules/@alex7kom/sayonara-config/src/configs/eslint-node-ts.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint"
+    }
+  },
+  "sayonaraConfig": {
+    "sets": [
+      "node-app-ts"
+    ]
+  }
+}
