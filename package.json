@@ -11,6 +11,9 @@
   },
   "author": "",
   "description": "",
+  "engines": {
+    "node": ">= 12.0.0"
+  },
   "devDependencies": {
     "@alex7kom/sayonara-config": "0.6.1",
     "husky": "^3.1.0"

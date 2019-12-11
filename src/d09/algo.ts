@@ -9,7 +9,7 @@ export function parseOpCode(
   return { op, mode1, mode2, mode3 };
 }
 
-interface ComputedValue {
+export interface ComputedValue {
   output?: number;
   memory: number[];
 }
